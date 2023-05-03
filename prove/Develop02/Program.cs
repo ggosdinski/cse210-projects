@@ -8,6 +8,7 @@ class Program
         Prompt generator = new Prompt();
 
         Console.WriteLine("Welcome to the Journal Program!");
+        
         Console.WriteLine();
         
         int userChoice = 0;
