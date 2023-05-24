@@ -1,0 +1,4 @@
+0
+SimpleGoal|Leer|asdasda|50|False
+EternalGoal|qada|asdasdas|122
+ChecklistGoal|asd|asdasd|12|0|3|120
