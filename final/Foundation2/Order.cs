@@ -9,14 +9,17 @@ public class Order
     public void AddItem(Product product) {
         _products.Add(product);
     }
-    private double CalculateSubtotal() {
+    private double CalculateSubtotal() 
+    {
         double subtotal = 0;
-        foreach (Product p in _products) {
+        foreach (Product p in _products) 
+        {
             subtotal += (p.GetPrice() * p.GetQuantity());
         }
         return subtotal;
     }
-    private double CalculateShippingCost(Address address) {
+    private double CalculateShippingCost(Address address)
+    {
         double shipping;
         if (address.GetCountry() == "USA") {
             shipping = 5;
@@ -25,12 +28,14 @@ public class Order
         }
         return shipping;
     }
-    private double CalculateTotalCost(Address address) {
+    private double CalculateTotalCost(Address address) 
+    {
         double subtotal = CalculateSubtotal();
         double shipping = CalculateShippingCost(address);
         return subtotal + shipping;
     }
-    public void PrintAllCosts(Address address) {
+    public void PrintAllCosts(Address address) 
+    {
         Console.WriteLine($"Subtotal: ${Math.Round(CalculateSubtotal(), 2)}");
         Console.WriteLine($"Shipping: ${Math.Round(CalculateShippingCost(address), 2)}");
         Console.WriteLine($"Total: ${Math.Round(CalculateTotalCost(address), 2)}");
